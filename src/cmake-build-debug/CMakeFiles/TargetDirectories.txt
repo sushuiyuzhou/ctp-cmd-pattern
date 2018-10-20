@@ -1,0 +1,3 @@
+/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/ctp-cmd.dir

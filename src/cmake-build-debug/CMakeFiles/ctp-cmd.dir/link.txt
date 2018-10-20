@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ctp-cmd.dir/main.cpp.o CMakeFiles/ctp-cmd.dir/trade/TradeSpi.cpp.o  -o ctp-cmd -lthostmduserapi -lthosttraderapi /usr/lib/x86_64-linux-gnu/libboost_program_options.so /usr/lib/x86_64-linux-gnu/libboost_filesystem.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_system.so 

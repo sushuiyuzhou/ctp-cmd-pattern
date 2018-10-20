@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="mock:///ThostFtdcMdApi.h" charset="GBK" />
+    <file url="mock:///ThostFtdcTraderApi.h" charset="GBK" />
+    <file url="mock:///ThostFtdcTraderApi.h" charset="GBK" />
+    <file url="mock:///ThostFtdcTraderApi.h" charset="GBK" />
+    <file url="mock:///ThostFtdcUserApiDataType.h" charset="GBK" />
+    <file url="mock:///ThostFtdcUserApiDataType.h" charset="GBK" />
+    <file url="mock:///ThostFtdcUserApiDataType.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ctp/ThostFtdcMdApi.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ctp/ThostFtdcTraderApi.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ctp/ThostFtdcUserApiDataType.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/ctp/ThostFtdcUserApiStruct.h" charset="GBK" />
+  </component>
+</project>
