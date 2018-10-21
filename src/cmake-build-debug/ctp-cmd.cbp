@@ -95,6 +95,12 @@
 		<Unit filename="/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/StrategyInvoker.h">
 			<Option target="ctp-cmd"/>
 		</Unit>
+		<Unit filename="/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeCmd.cpp">
+			<Option target="ctp-cmd"/>
+		</Unit>
+		<Unit filename="/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeCmd.h">
+			<Option target="ctp-cmd"/>
+		</Unit>
 		<Unit filename="/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeSpi.cpp">
 			<Option target="ctp-cmd"/>
 		</Unit>

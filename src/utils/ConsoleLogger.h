@@ -1,11 +1,10 @@
 //
 // Created by sushuiyuzhou on 21/10/18.
 //
-
-#include "../spdlog/spdlog.h"
-
 #ifndef CTP_CMD_CONSOLELOGGER_H
 #define CTP_CMD_CONSOLELOGGER_H
+
+#include "../spdlog/spdlog.h"
 
 namespace utils {
 

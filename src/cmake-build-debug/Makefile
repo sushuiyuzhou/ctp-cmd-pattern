@@ -177,6 +177,33 @@ trade/StrategyInvoker.cpp.s:
 	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.s
 .PHONY : trade/StrategyInvoker.cpp.s
 
+trade/TradeCmd.o: trade/TradeCmd.cpp.o
+
+.PHONY : trade/TradeCmd.o
+
+# target to build an object file
+trade/TradeCmd.cpp.o:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o
+.PHONY : trade/TradeCmd.cpp.o
+
+trade/TradeCmd.i: trade/TradeCmd.cpp.i
+
+.PHONY : trade/TradeCmd.i
+
+# target to preprocess a source file
+trade/TradeCmd.cpp.i:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.i
+.PHONY : trade/TradeCmd.cpp.i
+
+trade/TradeCmd.s: trade/TradeCmd.cpp.s
+
+.PHONY : trade/TradeCmd.s
+
+# target to generate assembly for a file
+trade/TradeCmd.cpp.s:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.s
+.PHONY : trade/TradeCmd.cpp.s
+
 trade/TradeSpi.o: trade/TradeSpi.cpp.o
 
 .PHONY : trade/TradeSpi.o
@@ -246,6 +273,9 @@ help:
 	@echo "... trade/StrategyInvoker.o"
 	@echo "... trade/StrategyInvoker.i"
 	@echo "... trade/StrategyInvoker.s"
+	@echo "... trade/TradeCmd.o"
+	@echo "... trade/TradeCmd.i"
+	@echo "... trade/TradeCmd.s"
 	@echo "... trade/TradeSpi.o"
 	@echo "... trade/TradeSpi.i"
 	@echo "... trade/TradeSpi.s"

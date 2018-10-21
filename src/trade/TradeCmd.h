@@ -51,10 +51,7 @@ class LogInCmd : public Command {
     return "<log in>";
   }
 
-  void doExecute() override {
-    // make sure the function call is working.
-    std::cout << "api version: " << _api->GetApiVersion() << std::endl;
-  }
+  void doExecute() override;
 
 public:
   LogInCmd(CThostFtdcTraderApi *api,

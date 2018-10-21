@@ -372,7 +372,9 @@ void TradeSpi::OnErrRtnOrderAction(CThostFtdcOrderActionField *pOrderAction,
 
 ///合约交易状态通知
 void TradeSpi::OnRtnInstrumentStatus(CThostFtdcInstrumentStatusField *pInstrumentStatus) {
-  _logger->info(BOOST_CURRENT_FUNCTION);
+  //_logger->info(BOOST_CURRENT_FUNCTION);
+  // followed by user login.
+  _logger->info("Instrument ID: {}",pInstrumentStatus->InstrumentID);
 }
 
 ///交易通知

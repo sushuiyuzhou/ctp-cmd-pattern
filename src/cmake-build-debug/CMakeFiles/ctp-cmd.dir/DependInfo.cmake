@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/main.cpp" "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/ctp-cmd.dir/main.cpp.o"
   "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/StrategyInvoker.cpp" "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.o"
+  "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeCmd.cpp" "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o"
   "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeSpi.cpp" "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/ctp-cmd.dir/trade/TradeSpi.cpp.o"
   "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/utils/ConsoleLogger.cpp" "/home/sushuiyuzhou/temp/ctp-cmd-pattern/src/cmake-build-debug/CMakeFiles/ctp-cmd.dir/utils/ConsoleLogger.cpp.o"
   )

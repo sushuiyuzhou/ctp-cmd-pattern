@@ -1,8 +1,8 @@
 # CLion files
-cmake-biuld-debug/
-CMakeFiles/
-.idea/
-googletest/
+src/cmake-biuld-debug/
+src/CMakeFiles/
+src/.idea/
+src/googletest/
 src/logs/
 
 # Prerequisites
