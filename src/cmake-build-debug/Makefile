@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+trade/StrategyInvoker.o: trade/StrategyInvoker.cpp.o
+
+.PHONY : trade/StrategyInvoker.o
+
+# target to build an object file
+trade/StrategyInvoker.cpp.o:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.o
+.PHONY : trade/StrategyInvoker.cpp.o
+
+trade/StrategyInvoker.i: trade/StrategyInvoker.cpp.i
+
+.PHONY : trade/StrategyInvoker.i
+
+# target to preprocess a source file
+trade/StrategyInvoker.cpp.i:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.i
+.PHONY : trade/StrategyInvoker.cpp.i
+
+trade/StrategyInvoker.s: trade/StrategyInvoker.cpp.s
+
+.PHONY : trade/StrategyInvoker.s
+
+# target to generate assembly for a file
+trade/StrategyInvoker.cpp.s:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.s
+.PHONY : trade/StrategyInvoker.cpp.s
+
 trade/TradeSpi.o: trade/TradeSpi.cpp.o
 
 .PHONY : trade/TradeSpi.o
@@ -177,6 +204,33 @@ trade/TradeSpi.cpp.s:
 	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/trade/TradeSpi.cpp.s
 .PHONY : trade/TradeSpi.cpp.s
 
+utils/ConsoleLogger.o: utils/ConsoleLogger.cpp.o
+
+.PHONY : utils/ConsoleLogger.o
+
+# target to build an object file
+utils/ConsoleLogger.cpp.o:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/utils/ConsoleLogger.cpp.o
+.PHONY : utils/ConsoleLogger.cpp.o
+
+utils/ConsoleLogger.i: utils/ConsoleLogger.cpp.i
+
+.PHONY : utils/ConsoleLogger.i
+
+# target to preprocess a source file
+utils/ConsoleLogger.cpp.i:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/utils/ConsoleLogger.cpp.i
+.PHONY : utils/ConsoleLogger.cpp.i
+
+utils/ConsoleLogger.s: utils/ConsoleLogger.cpp.s
+
+.PHONY : utils/ConsoleLogger.s
+
+# target to generate assembly for a file
+utils/ConsoleLogger.cpp.s:
+	$(MAKE) -f CMakeFiles/ctp-cmd.dir/build.make CMakeFiles/ctp-cmd.dir/utils/ConsoleLogger.cpp.s
+.PHONY : utils/ConsoleLogger.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +243,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... trade/StrategyInvoker.o"
+	@echo "... trade/StrategyInvoker.i"
+	@echo "... trade/StrategyInvoker.s"
 	@echo "... trade/TradeSpi.o"
 	@echo "... trade/TradeSpi.i"
 	@echo "... trade/TradeSpi.s"
+	@echo "... utils/ConsoleLogger.o"
+	@echo "... utils/ConsoleLogger.i"
+	@echo "... utils/ConsoleLogger.s"
 .PHONY : help
 
 

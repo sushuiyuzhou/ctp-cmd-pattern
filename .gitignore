@@ -1,3 +1,10 @@
+# CLion files
+cmake-biuld-debug/
+CMakeFiles/
+.idea/
+googletest/
+src/logs/
+
 # Prerequisites
 *.d
 
