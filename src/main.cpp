@@ -49,7 +49,7 @@ int main(int argc, char **argv) {
     pTradeUserApi->RegisterFront(config::gTradeFrontAddr);
 
     pTradeUserApi->SubscribePublicTopic(THOST_TERT_RESTART);
-    pTradeUserApi->SubscribePrivateTopic(THOST_TERT_RESTART);
+    pTradeUserApi->SubscribePrivateTopic(THOST_TERT_RESUME);
 
     pTradeUserApi->Init();
     pTradeUserApi->Join();

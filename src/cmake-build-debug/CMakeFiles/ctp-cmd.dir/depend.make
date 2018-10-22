@@ -94,6 +94,14 @@ CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.o: ../trade/./TradeCmd.h
 CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.o: ../trade/StrategyInvoker.cpp
 CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.o: ../trade/StrategyInvoker.h
 
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/common.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/log_msg.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/logger_impl.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/pattern_formatter_impl.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/formatter.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/logger.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/sinks/base_sink.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/sinks/sink.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../ctp/ThostFtdcTraderApi.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../ctp/ThostFtdcUserApiDataType.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../ctp/ThostFtdcUserApiStruct.h
@@ -102,12 +110,9 @@ CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/common.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/async_log_helper.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/async_logger_impl.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/file_helper.h
-CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/log_msg.h
-CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/logger_impl.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/mpmc_bounded_q.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/null_mutex.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/os.h
-CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/pattern_formatter_impl.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/registry.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/details/spdlog_impl.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/fmt/bundled/format.cc
@@ -117,7 +122,6 @@ CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/fmt/bundled/ostream.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/fmt/bundled/printf.cc
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/fmt/bundled/printf.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/fmt/fmt.h
-CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/formatter.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/logger.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/sinks/android_sink.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/sinks/ansicolor_sink.h
@@ -129,8 +133,11 @@ CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/sinks/syslog_sink.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/sinks/wincolor_sink.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/spdlog.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../spdlog/tweakme.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../trade/././TradeCmd.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../trade/./StrategyInvoker.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../trade/TradeCmd.cpp
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../trade/TradeCmd.h
+CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../trade/TradeSpi.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../utils/CVT.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o: ../utils/ConsoleLogger.h
 

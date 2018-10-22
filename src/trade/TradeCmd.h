@@ -18,21 +18,25 @@
 
 namespace trade {
 
+class TradeSpi;
+
+static int _reqID_ = 0;
+
 enum class CMD {
   LogIn,
   LogOut,
-  RequestSettlement
+  ReqQrySettlementInfo
 };
 
 class Command {
 protected:
   // action executor
   CThostFtdcTraderApi *_api;
-  CThostFtdcTraderSpi *_spi;
+  TradeSpi *_spi;
 
 public:
   Command(CThostFtdcTraderApi *api,
-          CThostFtdcTraderSpi *spi) :
+          TradeSpi *spi) :
       _api(api),
       _spi(spi) {};
 
@@ -55,7 +59,7 @@ class LogInCmd : public Command {
 
 public:
   LogInCmd(CThostFtdcTraderApi *api,
-           CThostFtdcTraderSpi *spi) : Command(api, spi) {
+           TradeSpi *spi) : Command(api, spi) {
   }
 };
 
@@ -69,21 +73,20 @@ class LogOutCmd : public Command {
 
 public:
   LogOutCmd(CThostFtdcTraderApi *api,
-            CThostFtdcTraderSpi *spi) : Command(api, spi) {
+            TradeSpi *spi) : Command(api, spi) {
   }
 };
 
-class RequestSettlementCmd : public Command {
+class ReqQrySettlementInfoCmd : public Command {
   const char *name() override {
-    return "<query settlement>";
+    return "<ReqQrySettlementInfo>";
   }
 
-  void doExecute() override {
-  }
+  void doExecute() override;
 
 public:
-  RequestSettlementCmd(CThostFtdcTraderApi *api,
-                       CThostFtdcTraderSpi *spi) : Command(api, spi) {
+  ReqQrySettlementInfoCmd(CThostFtdcTraderApi *api,
+                       TradeSpi *spi) : Command(api, spi) {
   }
 };
 

@@ -95,6 +95,14 @@ CMakeFiles/ctp-cmd.dir/trade/StrategyInvoker.cpp.o
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/StrategyInvoker.cpp
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/StrategyInvoker.h
 CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o
+ ../spdlog/common.h
+ ../spdlog/details/log_msg.h
+ ../spdlog/details/logger_impl.h
+ ../spdlog/details/pattern_formatter_impl.h
+ ../spdlog/formatter.h
+ ../spdlog/logger.h
+ ../spdlog/sinks/base_sink.h
+ ../spdlog/sinks/sink.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/ctp/ThostFtdcTraderApi.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/ctp/ThostFtdcUserApiDataType.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/ctp/ThostFtdcUserApiStruct.h
@@ -103,12 +111,9 @@ CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/async_log_helper.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/async_logger_impl.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/file_helper.h
- /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/log_msg.h
- /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/logger_impl.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/mpmc_bounded_q.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/null_mutex.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/os.h
- /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/pattern_formatter_impl.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/registry.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/details/spdlog_impl.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/fmt/bundled/format.cc
@@ -118,7 +123,6 @@ CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/fmt/bundled/printf.cc
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/fmt/bundled/printf.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/fmt/fmt.h
- /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/formatter.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/logger.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/sinks/android_sink.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/sinks/ansicolor_sink.h
@@ -130,8 +134,11 @@ CMakeFiles/ctp-cmd.dir/trade/TradeCmd.cpp.o
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/sinks/wincolor_sink.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/spdlog.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/spdlog/tweakme.h
+ /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/././TradeCmd.h
+ /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/./StrategyInvoker.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeCmd.cpp
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeCmd.h
+ /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/trade/TradeSpi.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/utils/CVT.h
  /home/sushuiyuzhou/temp/ctp-cmd-pattern/src/utils/ConsoleLogger.h
 CMakeFiles/ctp-cmd.dir/trade/TradeSpi.cpp.o

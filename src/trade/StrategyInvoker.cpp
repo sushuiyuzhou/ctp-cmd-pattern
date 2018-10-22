@@ -9,8 +9,9 @@ namespace trade {
 
 void StrategyInvoker::invoke(CMD cmd) {
   switch (cmd) {
-    case CMD::LogIn :
-      trade::LogInCmd(_api, _spi).execute();
+    case CMD::LogIn :trade::LogInCmd(_api, _spi).execute();
+      break;
+    case CMD::ReqQrySettlementInfo:trade::ReqQrySettlementInfoCmd(_api, _spi).execute();
       break;
   }
 }

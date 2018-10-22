@@ -33,9 +33,20 @@ public:
            spdlog::logger *logger) :
       _ptd(tradeApi),
       _logger(logger),
-      _strategy(_ptd, this){
+      _strategy(_ptd, this) {
     _logger->info(BOOST_CURRENT_FUNCTION);
   }
+
+public: // TOOD: ideally, mark private
+  bool _isLoggedIn = false;
+
+  ///查询投资者结算结果
+  ///经纪公司代码
+  TThostFtdcBrokerIDType _BrokerID;
+  ///投资者代码
+  TThostFtdcInvestorIDType _InvestorID;
+  ///交易日
+  TThostFtdcDateType _TradingDay;
 
 public:
   ///当客户端与交易后台建立起通信连接时（还未登录前），该方法被调用。

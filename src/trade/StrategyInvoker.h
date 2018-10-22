@@ -14,14 +14,16 @@
 
 namespace trade {
 
+class TradeSpi;
+
 class StrategyInvoker {
   // action executor
   CThostFtdcTraderApi *_api;
-  CThostFtdcTraderSpi *_spi;
+  TradeSpi *_spi;
 
 public:
   StrategyInvoker(CThostFtdcTraderApi *api,
-                  CThostFtdcTraderSpi *spi) :
+                  TradeSpi *spi) :
       _api(api),
       _spi(spi) {}
 

@@ -11,6 +11,7 @@ namespace trade {
 ///当客户端与交易后台建立起通信连接时（还未登录前），该方法被调用。
 void TradeSpi::OnFrontConnected() {
   _logger->info(BOOST_CURRENT_FUNCTION);
+
   _strategy.invoke(CMD::LogIn);
 }
 
@@ -37,7 +38,23 @@ void TradeSpi::OnRspAuthenticate(CThostFtdcRspAuthenticateField *pRspAuthenticat
 void TradeSpi::OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin,
                               CThostFtdcRspInfoField *pRspInfo,
                               int nRequestID,
-                              bool bIsLast) { _logger->info(BOOST_CURRENT_FUNCTION); }
+                              bool bIsLast) {
+  _logger->info(BOOST_CURRENT_FUNCTION);
+  if (bIsLast) {
+    if (pRspInfo->ErrorID) {
+      _logger->error("ctp error msg: {}", pRspInfo->ErrorMsg);
+    }
+
+    // register login status
+    _isLoggedIn = true;
+    strcpy(_BrokerID, pRspUserLogin->BrokerID);
+    strcpy(_InvestorID, pRspUserLogin->UserID);
+    strcpy(_TradingDay, pRspUserLogin->TradingDay);
+
+    // confirm settlement info
+    _strategy.invoke(CMD::ReqQrySettlementInfo);
+  }
+}
 
 ///登出请求响应
 void TradeSpi::OnRspUserLogout(CThostFtdcUserLogoutField *pUserLogout,
@@ -217,7 +234,22 @@ void TradeSpi::OnRspQryDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMar
 void TradeSpi::OnRspQrySettlementInfo(CThostFtdcSettlementInfoField *pSettlementInfo,
                                       CThostFtdcRspInfoField *pRspInfo,
                                       int nRequestID,
-                                      bool bIsLast) { _logger->info(BOOST_CURRENT_FUNCTION); }
+                                      bool bIsLast) {
+  _logger->info(BOOST_CURRENT_FUNCTION);
+  if (bIsLast) {
+    if (pRspInfo && (pRspInfo->ErrorID != 0)) {
+      _logger->error("ctp error msg: {}", pRspInfo->ErrorMsg);
+    }
+    // log if returned
+    if (pSettlementInfo) {
+      if (pSettlementInfo->SettlementID) {
+        _logger->info("SettlementID: {}", pSettlementInfo->SettlementID);
+      }
+    }
+  } else {
+    _logger->error("data not ended.");
+  }
+}
 
 ///请求查询转帐银行响应
 void TradeSpi::OnRspQryTransferBank(CThostFtdcTransferBankField *pTransferBank,
@@ -374,7 +406,14 @@ void TradeSpi::OnErrRtnOrderAction(CThostFtdcOrderActionField *pOrderAction,
 void TradeSpi::OnRtnInstrumentStatus(CThostFtdcInstrumentStatusField *pInstrumentStatus) {
   //_logger->info(BOOST_CURRENT_FUNCTION);
   // followed by user login.
-  _logger->info("Instrument ID: {}",pInstrumentStatus->InstrumentID);
+  //_logger->info("Exchange ID:                     {}", pInstrumentStatus->ExchangeID);
+//  _logger->info("Exchange Instrument ID:          {}", pInstrumentStatus->ExchangeInstID);
+//  _logger->info("Settlement Group ID:             {}", pInstrumentStatus->SettlementGroupID);
+//  _logger->info("Instrument ID:                   {}", pInstrumentStatus->InstrumentID);
+//  _logger->info("Instrument Status:               {}", pInstrumentStatus->InstrumentStatus);
+//  _logger->info("TThostFtdcTradingSegmentSNType:  {}", pInstrumentStatus->TradingSegmentSN);
+//  _logger->info("TThostFtdcTimeType:              {}", pInstrumentStatus->EnterTime);
+//  _logger->info("TFtdcInstStatusEnterReasonType:  {}", pInstrumentStatus->EnterReason);
 }
 
 ///交易通知
