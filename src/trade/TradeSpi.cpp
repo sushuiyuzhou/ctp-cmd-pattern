@@ -108,7 +108,28 @@ void TradeSpi::OnRspQueryMaxOrderVolume(CThostFtdcQueryMaxOrderVolumeField *pQue
 void TradeSpi::OnRspSettlementInfoConfirm(CThostFtdcSettlementInfoConfirmField *pSettlementInfoConfirm,
                                           CThostFtdcRspInfoField *pRspInfo,
                                           int nRequestID,
-                                          bool bIsLast) { _logger->info(BOOST_CURRENT_FUNCTION); }
+                                          bool bIsLast) {
+  _logger->info(BOOST_CURRENT_FUNCTION);
+  if (bIsLast) {
+    if (pRspInfo && (pRspInfo->ErrorID != 0)) {
+      _logger->error("ctp error msg: {}", pRspInfo->ErrorMsg);
+    }
+    // log if returned
+    if (pSettlementInfoConfirm) {
+      if (pSettlementInfoConfirm->InvestorID) {
+        _logger->info("InvestorID: {}", pSettlementInfoConfirm->InvestorID);
+      }
+    }
+
+    // ReqQrySettlementInfoConfirm
+    // _strategy.invoke(CMD::ReqQrySettlementInfoConfirm);
+
+    // Start trade
+    _strategy.invoke(CMD::ReqOrderInsert);
+  } else {
+    _logger->error("data not ended.");
+  }
+}
 
 ///删除预埋单响应
 void TradeSpi::OnRspRemoveParkedOrder(CThostFtdcRemoveParkedOrderField *pRemoveParkedOrder,
@@ -246,6 +267,9 @@ void TradeSpi::OnRspQrySettlementInfo(CThostFtdcSettlementInfoField *pSettlement
         _logger->info("SettlementID: {}", pSettlementInfo->SettlementID);
       }
     }
+
+    // ReqSettlementInfoConfirm
+    _strategy.invoke(CMD::ReqSettlementInfoConfirm);
   } else {
     _logger->error("data not ended.");
   }

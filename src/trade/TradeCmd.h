@@ -25,7 +25,10 @@ static int _reqID_ = 0;
 enum class CMD {
   LogIn,
   LogOut,
-  ReqQrySettlementInfo
+  ReqQrySettlementInfo,
+  ReqSettlementInfoConfirm,
+  // trade related
+  ReqOrderInsert
 };
 
 class Command {
@@ -86,7 +89,33 @@ class ReqQrySettlementInfoCmd : public Command {
 
 public:
   ReqQrySettlementInfoCmd(CThostFtdcTraderApi *api,
-                       TradeSpi *spi) : Command(api, spi) {
+                          TradeSpi *spi) : Command(api, spi) {
+  }
+};
+
+class ReqSettlementInfoConfirmCmd : public Command {
+  const char *name() override {
+    return "<ReqSettlementInfoConfirm>";
+  }
+
+  void doExecute() override;
+
+public:
+  ReqSettlementInfoConfirmCmd(CThostFtdcTraderApi *api,
+                              TradeSpi *spi) : Command(api, spi) {
+  }
+};
+
+class ReqOrderInsertCmd: public Command {
+  const char *name() override {
+    return "<ReqOrderInsert>";
+  }
+
+  void doExecute() override;
+
+public:
+  ReqOrderInsertCmd(CThostFtdcTraderApi *api,
+  TradeSpi *spi) : Command(api, spi) {
   }
 };
 

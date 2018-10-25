@@ -13,6 +13,12 @@ void StrategyInvoker::invoke(CMD cmd) {
       break;
     case CMD::ReqQrySettlementInfo:trade::ReqQrySettlementInfoCmd(_api, _spi).execute();
       break;
+    case CMD::ReqSettlementInfoConfirm:
+      trade::ReqSettlementInfoConfirmCmd(_api, _spi).execute();
+      break;
+    case CMD::ReqOrderInsert:
+      trade::ReqOrderInsertCmd(_api, _spi).execute();
+      break;
   }
 }
 void StrategyInvoker::askThenInvoke() {
