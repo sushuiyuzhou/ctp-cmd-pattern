@@ -4,9 +4,9 @@
 #include "TradeCmd.h"
 #include "TradeSpi.h"
 
-#include "../ctp/ThostFtdcUserApiStruct.h"
-#include "../ctp/ThostFtdcUserApiDataType.h"
 #include "../ctp/ThostFtdcTraderApi.h"
+#include "../ctp/ThostFtdcUserApiDataType.h"
+#include "../ctp/ThostFtdcUserApiStruct.h"
 
 #include "../utils/ConsoleLogger.h"
 
@@ -37,7 +37,8 @@ void LogInCmd::doExecute() {
 void ReqQrySettlementInfoCmd::doExecute() {
   utils::getConsoleLogger()->info(BOOST_CURRENT_FUNCTION);
 
-  auto qrySettlementInfoField = std::make_unique<CThostFtdcQrySettlementInfoField>();
+  auto qrySettlementInfoField =
+      std::make_unique<CThostFtdcQrySettlementInfoField>();
 
   strcpy(qrySettlementInfoField->BrokerID, _spi->_BrokerID);
   strcpy(qrySettlementInfoField->InvestorID, _spi->_InvestorID);
@@ -49,21 +50,25 @@ void ReqQrySettlementInfoCmd::doExecute() {
 
 void ReqSettlementInfoConfirmCmd::doExecute() {
   utils::getConsoleLogger()->info(BOOST_CURRENT_FUNCTION);
-  auto qrySettlementInfoConfirmField
-      = std::make_unique<CThostFtdcSettlementInfoConfirmField>();
+  auto qrySettlementInfoConfirmField =
+      std::make_unique<CThostFtdcSettlementInfoConfirmField>();
 
   std::cout << "query using broker id: " << _spi->_BrokerID << std::endl
             << "investor ID: " << _spi->_InvestorID << std::endl;
   strcpy(qrySettlementInfoConfirmField->BrokerID, _spi->_BrokerID);
   strcpy(qrySettlementInfoConfirmField->InvestorID, _spi->_InvestorID);
 
-  _api->ReqSettlementInfoConfirm(qrySettlementInfoConfirmField.get(), ++_reqID_);
+  _api->ReqSettlementInfoConfirm(qrySettlementInfoConfirmField.get(),
+                                 ++_reqID_);
 }
 
 void ReqOrderInsertCmd::doExecute() {
   utils::getConsoleLogger()->info(BOOST_CURRENT_FUNCTION);
 
   auto qryOrderInsert = std::make_unique<CThostFtdcInputOrderField>();
+  // construct order
+
+  _api->ReqOrderInsert(qryOrderInsert.get(), ++_reqID_);
 }
 
-}
+} // namespace trade

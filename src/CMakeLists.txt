@@ -13,7 +13,8 @@ set(SOURCE_FILES
         trade/TradeSpi.cpp
         utils/ConsoleLogger.cpp
         trade/StrategyInvoker.cpp
-        trade/TradeCmd.cpp)
+        trade/TradeCmd.cpp
+        order/OrderFactory.cpp)
 
 add_executable(ctp-cmd ${SOURCE_FILES})
 
