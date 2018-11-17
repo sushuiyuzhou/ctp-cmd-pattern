@@ -14,6 +14,8 @@ set(SOURCE_FILES
         utils/ConsoleLogger.cpp
         trade/StrategyInvoker.cpp
         trade/TradeCmd.cpp
+        market/MarketSpi.cpp
+        market/MarketCmd.cpp
         order/OrderFactory.cpp)
 
 add_executable(ctp-cmd ${SOURCE_FILES})
